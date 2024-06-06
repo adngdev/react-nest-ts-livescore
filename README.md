@@ -1,1 +1,1 @@
-# react-node-livescore
+# react-nest-ts-livescore

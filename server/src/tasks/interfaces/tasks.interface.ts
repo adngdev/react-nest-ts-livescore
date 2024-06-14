@@ -1,5 +1,5 @@
-export interface TasksInterface {
-    name: string
-    description?: string
+import { Prisma } from '@prisma/client';
+
+export interface TasksInterface extends Prisma.TaskCreateInput {
     author_id: string
 }

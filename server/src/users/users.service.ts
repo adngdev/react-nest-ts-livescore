@@ -3,10 +3,10 @@ import { PrismaService } from '../prisma.service';
 import { Prisma } from '@prisma/client';
 
 @Injectable()
-export class TasksService {
+export class UsersService{
     constructor(private readonly prisma: PrismaService) {};
 
-    async createTask(data: Prisma.TaskCreateInput) {
-        return this.prisma.task.create({ data });
+    async createUser(data: Prisma.UserCreateInput) {
+        return this.prisma.user.create({ data });
     };
 }

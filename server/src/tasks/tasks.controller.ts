@@ -6,8 +6,8 @@ import { TasksService } from './tasks.service';
 import { TasksInterface } from './interfaces/tasks.interface';
 
 @Controller('/tasks')
-export class TasksController{
-    constructor(private readonly taskService: TasksService) {}
+export class TasksController {
+    constructor(private readonly tasksService: TasksService) {}
 
     @Get()
     findAll(@Req() req: Request, @Res() res: Response, @Next() next: NextFunction): [] {
@@ -20,7 +20,7 @@ export class TasksController{
     ) {
         const { name, author_id, description } = taskData;
 
-        return this.taskService.createTask({
+        return this.tasksService.createTask({
             name,
             description,
             user: {
